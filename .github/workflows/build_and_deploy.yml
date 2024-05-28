@@ -1,0 +1,38 @@
+name: Deploy Hugo site to vps
+
+on:
+  push:
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-22.04
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.119.0'
+      - name: Build
+        run: hugo --minify
+
+      - name: Deploy to Server
+        uses: burnett01/rsync-deployments@7.0.1
+        with:
+          switches: -rzvc --delete
+          path: public/
+          remote_path: ${{ secrets.DEPLOY_PATH }}
+          remote_host: ${{ secrets.DEPLOY_HOST }}
+          remote_port: ${{ secrets.DEPLOY_PORT }}
+          remote_user: ${{ secrets.DEPLOY_USER }}
+          remote_key: ${{ secrets.DEPLOY_KEY }}
+          remote_key_pass: ${{ secrets.DEPLOY_KEY_PASS }}
