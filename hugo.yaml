@@ -1,0 +1,107 @@
+baseURL: "https://tobiabocchi.me/"
+title: Tobia Bocchi
+paginate: 5
+theme: PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+googleAnalytics: G-M3G34X4516
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: tobiabocchi.me
+  description: "whoami, blogging, notes"
+  keywords: [Blog, Portfolio, PaperMod]
+  author: Tobia Bocchi
+  # images: ["<link or path of image for opengraph, twitter-cards>"]
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: false
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: false
+  ShowRssButtonInSectionTermList: true
+  ShowToc: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+
+  assets:
+    disableFingerprinting: true
+    favicon: "/favicon.ico"
+    favicon16x16: "/favicon-16x16.png"
+    favicon32x32: "/favicon-32x32.png"
+    apple_touch_icon: "/apple-touch-icon.png"
+    safari_pinned_tab: "/safari-pinned-tab.svg"
+
+  label:
+    text: "Home"
+    icon: /apple-touch-icon.png
+    iconHeight: 35
+
+  # home-info mode
+  homeInfoParams:
+    Title: "Hi there \U0001F913"
+    Content: My name is Tobia, welcome to my blog
+
+  socialIcons:
+    - name: instagram
+      url: "https://instagram.com/tobiabocchi/"
+    - name: github
+      url: "https://github.com/tobiabocchi"
+    - name: wikipedia
+      url: "https://https://en.wikipedia.org/wiki/Tobia_Bocchi"
+
+  cover:
+    hidden: false # hide everywhere but not in structured data
+    hiddenInList: false # hide on list pages and home
+    hiddenInSingle: false # hide on single page
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "permalink", "summary", "content"]
+menu:
+  main:
+    - identifier: whoami
+      name: whoami
+      url: /whoami
+      weight: 10
+    - identifier: Search
+      name: search
+      url: /search
+      weight: 10
+
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+pygmentsUseClasses: true
+markup:
+  highlight:
+    noClasses: false
+    # anchorLineNos: true
+    # codeFences: true
+    # guessSyntax: true
+    # lineNos: true
+    # style: monokai
