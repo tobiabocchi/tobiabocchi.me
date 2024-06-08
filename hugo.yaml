@@ -1,5 +1,5 @@
 baseURL: "https://tobiabocchi.me/"
-title: Tobia Bocchi
+title: "Tobia Bocchi: whoami, blogging, notes"
 paginate: 5
 theme: PaperMod
 
@@ -8,16 +8,24 @@ buildDrafts: false
 buildFuture: false
 buildExpired: false
 
-googleAnalytics: G-M3G34X4516
-
 minify:
   disableXML: true
   minifyOutput: true
 
+outputs:
+  home:
+  - HTML
+  - RSS
+  - JSON
+
+services:
+  googleAnalytics:
+    id: "G-M3G34X4516"
+
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: tobiabocchi.me
-  description: "whoami, blogging, notes"
+  description: I'm Tobia Bocchi, a professional athlete with a passion for computers, in this blog you'll find some notes and posts about my recent activities!
   keywords: [Blog, Portfolio, PaperMod]
   author: Tobia Bocchi
   # images: ["<link or path of image for opengraph, twitter-cards>"]
@@ -66,7 +74,7 @@ params:
     - name: github
       url: "https://github.com/tobiabocchi"
     - name: wikipedia
-      url: "https://https://en.wikipedia.org/wiki/Tobia_Bocchi"
+      url: "https://en.wikipedia.org/wiki/Tobia_Bocchi"
 
   cover:
     hidden: false # hide everywhere but not in structured data
