@@ -73,8 +73,8 @@ params:
       url: "https://instagram.com/tobiabocchi/"
     - name: github
       url: "https://github.com/tobiabocchi"
-    - name: wikipedia
-      url: "https://en.wikipedia.org/wiki/Tobia_Bocchi"
+    - name: linkedin
+      url: "http://linkedin.com/in/tobia-bocchi-696847201/"
 
   cover:
     hidden: false # hide everywhere but not in structured data
