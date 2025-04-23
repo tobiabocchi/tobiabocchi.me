@@ -1,6 +1,7 @@
 baseURL: "https://tobiabocchi.me/"
 title: "Tobia Bocchi: whoami, blogging, notes"
-paginate: 5
+pagination:
+  pagerSize: 5
 theme: PaperMod
 
 enableRobotsTXT: true
